@@ -1,0 +1,218 @@
+body{
+  background: url('./images/bg-desktop-dark.jpg') no-repeat;
+  background-color: #181824 ;
+  font-size: 18px;
+}
+
+.App {
+  text-align: center;
+  font-size: 18px;
+  width: 540px;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 60px 0px 30px;
+}
+
+header > h1{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+}
+
+header > img{
+  height: 30px;
+  align-self: center;
+}
+
+.form{
+  display: flex;
+  background: hsl(237, 14%, 26%);
+  border: none;
+  border-radius: 5px;
+}
+
+.form > img {
+  height: fit-content;
+  pointer-events: none;
+}
+
+.field{
+  width: 100%;
+  height: 40px;
+  background: hsl(237, 14%, 26%);
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+  font-size: 18px;
+  color: hsl(234, 39%, 85%)
+}
+
+.listOfTodos{
+  margin: 20px 0;
+  background: linear-gradient(hsl(237, 14%, 26%), hsl(233, 14%, 35%));
+  box-shadow: #112231 1px 3px 3px 1px;
+}
+
+.todo{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px 0px;
+  display: flex;
+  font-size: 18px;
+  color: hsl(234, 39%, 85%);
+  border-bottom: 1px solid hsl(234, 39%, 85%);
+}
+.check {
+  border-radius: 50%;
+  padding: 9px;
+  margin: auto 20px;
+  height: fit-content;
+  border: 1px solid hsl(234, 39%, 85%);
+}
+.check:hover{
+  cursor: pointer;
+}
+
+.checkDone{
+  content: url('./images/icon-check.svg');
+  padding: 5px 4px;
+  background: linear-gradient(130deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.action{
+  font-size: 18px;
+  color: hsl(234, 39%, 85%);
+  padding: 10px;
+  width: 420px;
+  overflow: hidden;
+}
+
+.actionDone{
+  color: hsl(234, 11%, 52%);
+  text-decoration: line-through hsl(234, 11%, 52%);
+}
+
+.action:hover{
+  cursor: pointer;
+}
+
+.todo .delete {
+  visibility: hidden;
+  height: fit-content;
+  margin: auto 20px;
+}
+
+.todo:hover .delete {
+  visibility: visible
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.counter, .clear{
+  color: hsl(234, 11%, 52%);
+  margin: auto 0;
+  font-size: .8em;
+}
+
+.filters{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 20px 10px;
+}
+
+.filters >* {
+  color: hsl(234, 11%, 52%);
+  font-size: .9em;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.clear{
+  font-size: .9em;
+}
+
+.filters > *:hover, .clear:hover{
+  cursor: pointer;
+  color: hsl(234, 39%, 85%);
+}
+
+.activeFilter{
+  color: dodgerblue
+}
+
+.styleToggler{
+  cursor: pointer;
+  content: url('./images/icon-sun.svg');
+}
+
+.moon{
+  content: url(./images/icon-moon.svg);
+}
+
+.bodyLight{
+  background: url('./images/bg-desktop-light.jpg') no-repeat;
+  background-color: hsl(236, 33%, 92%)
+}
+
+.todoLight{
+    background: hsl(0, 0%, 98%); 
+}
+
+.actionLight{
+  color: hsl(235, 19%, 35%);
+}
+
+.doneLight{
+  color: hsl(233, 11%, 84%);
+  text-decoration: line-through hsl(233, 11%, 84%);
+}
+
+.footerLight:hover{
+  color: hsl(235, 19%, 35%);
+}
+
+@media screen and (max-width: 600px){
+  
+  .App {
+    font-size: 16px;
+    width: 310px;
+  }
+  header{
+    padding: 0
+  }
+  header > h1 {
+    letter-spacing: 6px;
+  }
+  .field, .todo {
+    height: 30px;
+    font-size: 14px;
+  }
+  .check {
+    margin: auto 10px;
+  }
+  .action {
+    font-size: 14px;
+  }
+  .counter{
+    font-size: .7em;
+  }
+  .filters {
+    padding: 10px 0 10px 10px;
+  }
+  .filters > *, .clear{
+    font-size: .8em;
+  }
+
+}
